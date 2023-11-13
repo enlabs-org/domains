@@ -3,7 +3,7 @@ resource "cloudflare_record" "monitoring" {
   name    = "monitoring"
   value   = "167.172.103.241"
   type    = "A"
-  proxied = true
+  proxied = false
 }
 
 resource "cloudflare_record" "uptime" {
@@ -11,7 +11,7 @@ resource "cloudflare_record" "uptime" {
   name    = "uptime"
   value = "monitoring.enlabs.cz"
   type    = "CNAME"
-  proxied = true
+  proxied = false
 }
 
 resource "cloudflare_record" "grafana" {
@@ -19,5 +19,5 @@ resource "cloudflare_record" "grafana" {
   name    = "grafana"
   value = "monitoring.enlabs.cz"
   type    = "CNAME"
-  proxied = true
+  proxied = false
 }
