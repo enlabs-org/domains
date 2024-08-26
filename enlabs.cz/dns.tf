@@ -53,3 +53,11 @@ resource "cloudflare_record" "ecomail-dkim" {
   type    = "TXT"
   proxied = false
 }
+
+resource "cloudflare_record" "goapp" {
+  zone_id = var.cloudflare_zone_id
+  name    = "go"
+  value = "golang-sample2-otimk.ondigitalocean.app"
+  type    = "CNAME"
+  proxied = false
+}
